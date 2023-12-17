@@ -1,6 +1,6 @@
 <template>
     <div id="parent">
-        <form>
+        <form @submit.prevent="formSubmit">
             <h1>Sign Up Form</h1>
             <!-- Using v-model to save data in properties -->
             <label>Email: </label>
@@ -76,6 +76,14 @@ export default {
         },
         deleteLang(lang){
             this.languages = this.languages.filter(item=> item !=lang )
+        },
+        formSubmit(){
+            console.log('The page has refreshed');
+            this.email = ''
+            this.password = ''
+            this.terms = false
+            this.currentLanguage = ''
+            this.role = ''
         }
     }, computed:{
         addLanguage(){
