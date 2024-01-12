@@ -1,7 +1,7 @@
 <template>
     <div id="parent">
         <form @submit.prevent="formSubmit">
-            <h1>Sign Up Form</h1>
+            <h1>Sign Up Form okiohihuyhgvufvtycfyhcgcgyv</h1>
             <!-- Using v-model to save data in properties -->
             <label>Email: </label>
             <input type="email" required v-model="email">
@@ -12,9 +12,9 @@
             <!-- Select box -->
             <select v-model="role">
                 <!-- default option -->
-                <option value="">Select a role:</option>
                 <option value="developer">Web Developer</option>
                 <option value="designer">Web Designer</option>
+                <option value="">Select a role:</option>
             </select>
             <label >Languages:</label>
             <input type="text" v-model="currentLanguage" @keydown="keyfinder" @keyup.enter.alt="addLanguage">
@@ -87,9 +87,9 @@ export default {
         }
     }, computed:{
         addLanguage(){
-            // if(!this.languages.includes(this.currentLanguage)){
+            if(!this.languages.includes(this.currentLanguage)){
                 this.languages.push(this.currentLanguage)
-            // }
+            }
         },
     }
 }
